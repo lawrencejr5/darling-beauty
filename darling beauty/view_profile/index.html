@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFF7EF">
+    <title>Darling Beauty - Profile</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+</head>
+<body>
+    <div class="profile container">
+        <header>
+            <div class="header">
+                <img src="../assets/img/chevron-left.png" onclick="history.go(-1)" style="cursor: pointer;" alt="">
+                <span></span>
+                <div></div>
+            </div>
+        </header>
+        <main>
+            <section class="details">
+                <div class="profilePic" style="background-image: url(../assets/img/gallery3.png);"></div>
+                <div class="stats">
+                    <h3>Chiamaka Lovelyn</h3>
+                    <small>Votes 37</small>
+                    <small>Photos 4/4</small>
+                </div>
+            </section>
+            <section class="action">
+                <button onclick="vote()">Vote</button>
+            </section>
+            <section class="profile_gallery">
+                <h5>Photo gallery 8/8</h5>
+                <div class="img_lay">
+                    <img src="../assets/img/gallery3.png" alt="">
+                    <img src="../assets/img/profile2.png" alt="">
+                    <img src="../assets/img/profile3.png" alt="">
+                    <img src="../assets/img/profile4.png" alt="">
+                    <img src="../assets/img/profile1.png" alt="">
+                    <img src="../assets/img/profile2.png" alt="">
+                    <img src="../assets/img/profile3.png" alt="">
+                    <img src="../assets/img/profile4.png" alt="">
+                    <img src="../assets/img/profile1.png" alt="">
+                    <img src="../assets/img/profile2.png" alt="">
+                    <img src="../assets/img/profile3.png" alt="">
+                    <img src="../assets/img/profile4.png" alt="">
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="vote_modal" id="vote_modal">
+        <img src="../assets/img/Close.png" height="40px" class="close" onclick="close_vote_modal()" alt="" >
+        <div class="in_vote_modal">
+            <div class="vote_form">
+                <form action="">
+                    <div class="bank_details" id="bank_details">
+                        <span class="">
+                           <b>Please transfer 100# to this account to vote for this contestant.</b> <br>
+                            05371919243 <br>
+                            Gtbank <br>
+                            Oputa Ifeanyi Lawrence
+                        </span>
+                    </div>
+                    <br>
+                    <div class="inp_grp" id="inp_grp1">
+                        <label for="">Full name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name">
+                    </div>
+                    <div class="inp_grp" id="inp_grp2">
+                        <label for="">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="inp_grp" id="inp_grp3">
+                        <button type="button" onclick="submit_vote()">Submit</button>
+                    </div>
+                    <div class="confirm bg-success" id="confirming">
+                        <span>Thank you. <br>
+                            Your vote would count once we see your transfer
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let vote_modal = document.getElementById("vote_modal");
+        let confirming = document.getElementById("confirming");
+        function vote(){
+            vote_modal.style.display = "block";
+        }
+        function close_vote_modal(){
+            vote_modal.style.display = "none";
+        }
+        function submit_vote(){
+            let fullname = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let inp_grp1 = document.getElementById("inp_grp1")
+            let inp_grp2 = document.getElementById("inp_grp2")
+            let inp_grp3 = document.getElementById("inp_grp3")
+            let bank_details = document.getElementById("bank_details")
+            if(fullname == "" || email == ""){
+                window.alert("Please input all fields")
+            }else{
+                confirming.style.display = "block";
+                inp_grp1.style.display = "none";
+                inp_grp2.style.display = "none";
+                inp_grp3.style.display = "none";
+                bank_details.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>

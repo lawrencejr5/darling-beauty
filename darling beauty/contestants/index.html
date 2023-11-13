@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFF7EF">
+    <title>Darling Beauty - Contestants</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+    <div class="contestants container">
+        <header>
+            <div class="header">
+                <img src="../assets/img/chevron-left.png" onclick="history.go(-1)" style="cursor: pointer;" alt="">
+                <span>Contestants</span>
+                <div></div>
+            </div>
+            <div class="search">
+                <i class="bi bi-search"></i>
+                <input type="text" id="search" placeholder="Search contestants">
+            </div>
+        </header>
+        <main>
+           <section class="card_section">
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/gallery3.png);"></div>
+                    <div class="profile_details">
+                        <h5>Chiamaka Lovelyn</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/gallery4.png);"></div>
+                    <div class="profile_details">
+                        <h5>Nmesoma Nwabuobi</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/gallery1.png);"></div>
+                    <div class="profile_details">
+                        <h5>Mia Khalifa</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/gallery5.png);"></div>
+                    <div class="profile_details">
+                        <h5>Nicki Minaj</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/pagent4.png);"></div>
+                    <div class="profile_details">
+                        <h5>Haruno Sakura</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/pagent2.png);"></div>
+                    <div class="profile_details">
+                        <h5>Mei Terumi</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="profile_pic" style="background-image: url(../assets/img/pagent1.png);"></div>
+                    <div class="profile_details">
+                        <h5>Uzumaki Hinata</h5>
+                        <span>112 votes</span>
+                        <div class="action">
+                            <a href="../view_profile/index.html"><button>View profile</button></a>
+                            <button onclick="vote()">Vote</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+           </section>
+
+        </main>
+    </div>
+    <div class="vote_modal" id="vote_modal">
+        <img src="../assets/img/Close.png" height="40px" class="close" onclick="close_vote_modal()" alt="" >
+        <div class="in_vote_modal">
+            <div class="vote_form">
+                <form action="">
+                    <div class="bank_details" id="bank_details">
+                        <span class="">
+                           <b>Please transfer 100# to this account to vote for this contestant.</b> <br>
+                            05371919243 <br>
+                            Gtbank <br>
+                            Oputa Ifeanyi Lawrence
+                        </span>
+                    </div>
+                    <br>
+                    <div class="inp_grp" id="inp_grp1">
+                        <label for="">Full name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name">
+                    </div>
+                    <div class="inp_grp" id="inp_grp2">
+                        <label for="">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="inp_grp" id="inp_grp3">
+                        <button type="button" onclick="submit_vote()">Submit</button>
+                    </div>
+                    <div class="confirm bg-success" id="confirming">
+                        <span>Thank you. <br>
+                            Your vote would count once we see your transfer
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let vote_modal = document.getElementById("vote_modal");
+        let confirming = document.getElementById("confirming");
+        function vote(){
+            vote_modal.style.display = "block";
+        }
+        function close_vote_modal(){
+            vote_modal.style.display = "none";
+        }
+        function submit_vote(){
+            let fullname = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let inp_grp1 = document.getElementById("inp_grp1")
+            let inp_grp2 = document.getElementById("inp_grp2")
+            let inp_grp3 = document.getElementById("inp_grp3")
+            let bank_details = document.getElementById("bank_details")
+            if(fullname == "" || email == ""){
+                window.alert("Please input all fields")
+            }else{
+                confirming.style.display = "block";
+                inp_grp1.style.display = "none";
+                inp_grp2.style.display = "none";
+                inp_grp3.style.display = "none";
+                bank_details.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>

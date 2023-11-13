@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFF7EF">
+    <title>Darling Beauty - Home</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="body-container">
+        <header>
+            <div class="nav">
+                <span>DARLING BEAUTY</span>
+                <ul>
+                    <a href="./signin/index.html"><button id="login-btn">Login</button></a>
+                    <img src="./assets/img/bars.png" alt="" class="nav_bar" id="nav_bar" onclick="open_nav()">
+                    <li><a href="./profile/index.html">Profile</a></li>
+                    <li><a href="./contestants/index.html">Contestants</a></li>
+                    <li><a href="./sponsors/index.html">Sponsors</a></li>
+                    <li><a href="./gallery/index.html">Gallery</a></li>
+                    <li><a href="./about/index.html">About Us</a></li>
+                    <li><a href="./contact/index.html">Contact Us</a></li>
+                    <li><a href="./register/index.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="mobile_nav" id="mobile_nav">
+                <img src="./assets/img/Close.png" class="close" id="close" onclick="close_nav()" alt="">
+                <div class="nav_nav_bar">
+                    <div class="line"></div>
+                    <span><a href="./profile/index.html">Profile</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./contestants/index.html">Contestants</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./sponsors/index.html">Sponsors</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./gallery/index.html">Gallery</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./about/index.html">About Us</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./contact/index.html">Contact Us</a></span>
+                    <div class="line"></div><br>
+                    <div class="line"></div>
+                    <span><a href="./register/index.html">Register</a></span>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="content">
+                    <img src="./assets/img/logo2.png" alt=""><br>
+                    <a href="./register/index.html"><button>Register now</button></a>
+                </div>
+            </div>
+        </header>
+        <main class="container hm_body">
+            <section class="about">
+                <h3>ABOUT DARING <br> BEAUTY</h3>
+                <p>
+                    Darling Beauty pageant is an online event
+                    whereby women are given the opportunity
+                    to flaunt their beauty, lifestyle and
+                    creativity through photography,
+                    portraits, exhibitions and so
+                    much more....
+                </p>
+                <div class="flex_imgs">
+                    <img src="./assets/img/pagent1.png" alt="">
+                    <img src="./assets/img/pagent2.png" alt="">
+                    <img src="./assets/img/pagent3.png" alt="">
+
+                </div>
+            </section>
+
+            <section class="about">
+                <h3>BEAUTY MEETS <br> LIFESTYLE</h3>
+                <p>
+                    Darling Beauty pageant show offers limitless
+                    opportunities for participants to flaunt
+                    their lifestyles and at same time
+                    having a unique experience.
+                </p>
+                <div class="flex_imgs">
+                    <img src="./assets/img/pagent7.png" alt="">
+                    <img src="./assets/img/pagent6.png" alt="">
+                    <img src="./assets/img/pagent8.png" alt="">
+                </div>
+            </section>
+
+            <section class="about">
+                <h3>EMBRACE YOUR <br> CULTURE</h3>
+                <p>
+                    Darling Beauty pageant show offers limitless
+                    opportunities for participants to flaunt
+                    their lifestyles and at same time
+                    having a unique experience.
+                </p>
+                <div class="flex_imgs">
+                    <img src="./assets/img/pagent5.png" alt="">
+                    <img src="./assets/img/pagent4.png" alt="">
+                    <img src="./assets/img/pagent5.png" alt="">
+                </div>
+            </section>
+        </main>
+        <main class="bottom_content">
+            <section class="body">
+                <p>HAVE WHAT IT TAKES
+                    TO BE CROWNED MISS
+                    DARLING BEAUTY?
+                </p>
+                <button>Register now</button>
+            </section>
+        </main>
+        <main class="footer"><br>
+            <section class="logo">
+                <img src="./assets/img/logo3.png" alt="">
+            </section>
+            <section class="f_nav container">
+                <div id="ul">
+                    <span>Sponsors</span>
+                    <span>Terms & Conditions</span>
+                    <span>Private policy</span>
+                    <span>Contact</span>
+                    <span>Developer contact</span>
+                    <span>Register</span>
+                </div>
+            </section>
+            <section class="socials container">
+                <img src="./assets/img/Twitter.png" alt="">
+                <img src="./assets/img/Instagram.png" alt="">
+                <img src="./assets/img/Facebook.png" alt=""><br><br>
+                <div class="socials_name">
+                    <span>darlingbeautyng</span><br>
+                    <b>darlingbeautyng@gmail.com</b>
+                </div><br><br><br>
+                <small class="credit">&copy;Decreatives 2023</small>
+                <br><br>
+            </section>
+        </main>
+    </div>
+    <script>
+        let mobile_nav = document.getElementById("mobile_nav")
+        function open_nav() {
+            mobile_nav.style.display = "block";
+        }
+        function close_nav() {
+            mobile_nav.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
